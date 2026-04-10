@@ -1,0 +1,297 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background: #f5f5f7;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+header .subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Sections */
+.section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* CSV Input */
+.input-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.file-upload {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e8e8ec;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.file-upload:hover {
+  background: #ddd;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.or-text {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: vertical;
+  background: #fafafa;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #4a90d9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover {
+  background: #3a7bc8;
+}
+
+/* Messages */
+.messages {
+  margin-bottom: 1rem;
+}
+
+.msg {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.msg-error {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #a00;
+}
+
+.msg-warning {
+  background: #fff8e6;
+  border: 1px solid #ffe0a0;
+  color: #8a6d00;
+}
+
+/* Tables */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.results-table th {
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.results-table th:hover {
+  color: #222;
+}
+
+.results-table th:first-child,
+.results-table td:first-child {
+  text-align: left;
+}
+
+.results-table th:nth-child(2),
+.results-table td:nth-child(2) {
+  text-align: left;
+}
+
+.results-table tr.total-row {
+  font-weight: 600;
+  border-top: 2px solid #ccc;
+}
+
+.results-table tr.total-row td {
+  border-bottom: none;
+}
+
+.participant-header {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.participant-header:first-child {
+  margin-top: 0;
+}
+
+/* Summary table */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-table th {
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+  text-align: left;
+}
+
+.summary-table td:nth-child(1) {
+  text-align: center;
+  font-weight: 600;
+  width: 50px;
+}
+
+.summary-table td:nth-child(3) {
+  text-align: right;
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+}
+
+.summary-table td:nth-child(4) {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Price reference */
+.collapsible-header {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.collapsible-header .arrow {
+  transition: transform 0.2s;
+  font-size: 0.8rem;
+}
+
+.collapsible-header.open .arrow {
+  transform: rotate(90deg);
+}
+
+.collapsible-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.collapsible-content.open {
+  display: block;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.price-table th,
+.price-table td {
+  padding: 0.4rem 0.75rem;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table th {
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+}
+
+.price-table th:first-child,
+.price-table td:first-child {
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #999;
+}
