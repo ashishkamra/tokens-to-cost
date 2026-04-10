@@ -16,6 +16,10 @@ const ALIASES = {
   "claude-3-opus": "anthropic/claude-3-opus",
   "gemini-2.5-pro": "google/gemini-2.5-pro",
   "gemini-2.5-flash": "google/gemini-2.5-flash",
+  "mistral-small-24b-w8a8": "mistralai/mistral-small-3.1-24b-instruct",
+  "mistral-small": "mistralai/mistral-small-3.2-24b-instruct",
+  "mistral-large": "mistralai/mistral-large",
+  "mistral-nemo": "mistralai/mistral-nemo",
 };
 
 const REQUIRED_COLUMNS = [
